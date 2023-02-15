@@ -134,6 +134,7 @@ main figure img {
 article,.article {
     display: block;
     margin: 5vh 0 5vh 30vw;
+    max-width: 55vw;
 }
 
 article p {
@@ -183,7 +184,7 @@ article p {
         transform: scale(1);
     }
     to {
-        transform: scale(1.1);
+        transform: scale(1.05);
         border: solid black 1px;
         box-shadow: 5px 5px #1e1e1eaa;
     }
