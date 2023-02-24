@@ -8,39 +8,36 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Header */
+
 a.active {
     background-color: rgb(169, 31, 31);
-    box-shadow: 0 9px rgb(77, 17, 17);
 }
 
 nav {
-    position: absolute;
-    top: 6%;
-    right: 1%;
-    background: none;
+    display: flex;
+    background-color: rgb(37, 37, 37);
+    position: sticky;
+    top: 0;
 }
 
 header a {
+    display: flex;
+    flex-grow: 1;
     text-decoration: none;
     color: azure;
-    margin-left: 1rem;
     background-color: rgb(37, 37, 37);
     font-weight: bold;
     padding: 0.5rem;
-    border-radius: 50%;
-    box-shadow: 0 9px #1e1e1e;
-    border: none;
-    display: inline-block;
+    justify-content: center;
 }
 
 header a:hover {
     background-color: rgb(238, 187, 18);
-    box-shadow: 0 9px rgb(101, 57, 24);
 }
 
 header a:active {
-    transform: translateY(15%);
-    box-shadow: 0 4px rgb(101, 57, 24);
+    transform: scale(0.95);
 }
 
 header {
@@ -48,30 +45,38 @@ header {
     background-color: rgb(0, 0, 0);
 }
 
-header>div,h1 {
-    background-color: rgb(0, 0, 0);
-}
-
 header figure {
-    height: 35vh;
+    display: flex;
+    max-height: 40vh;
+    justify-content: flex-start;
 }
 
 header img {
     object-fit: cover;
-    height:  100%;
+    height: 100%;
     width: 100%;
 }
 
 h1.title {
-    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    display: flex;
     color: rgb(238, 187, 18);
-    text-shadow: 0 3px 0 rgb(101, 57, 24);
-    margin: 1%;
-    height: 6%;
+    text-shadow: 0px 3px rgb(101, 57, 24);
+    padding: 1rem;
+    font-weight: 900;
+    min-height: 10vh;
+}
+
+/* Main */
+section {
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
 }
 
 h2 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     border: 0.2rem solid rgb(238, 187, 18);
     background-color: rgb(0, 0, 0);
     color: azure;
@@ -83,71 +88,67 @@ h2:hover {
     border: 0.2rem solid rgb(0, 0, 0);
     background-color: rgb(238, 187, 18);
     color: black;
-    transform: scale(1.2);
-}
-
-main {
-    min-height: 60vh;
-}
-
-section {
-    min-width: 60vh;
-    position: relative;
-    top: -5vh;
-}
-
-.images {
-    display: inline-block;
-    position: absolute;
-    top: 8vh;
-    font-size: 0;
-    text-align: center;
-    min-width: 30vw;
-    max-width: 30vw;
-}
-
-section figure{
-    display: block;
-    font-size: inherit;
-}
-
-main figure img {
-    height: 25vh;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    background-color: white;
-    border-radius: 1rem;
-    border: 0.1rem solid rgb(0, 0, 0);
 }
 
 .container {
-    display: block;
+    display: flex;
     max-width: 100vw;
-    
+    min-height: 50vh;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.articles {
-    min-width: 60vw;
-    display: block;
-}
-
-article,.article {
-    display: block;
-    margin: 5vh 0 5vh 30vw;
-    max-width: 55vw;
-}
-
-article p {
-    text-indent: 2vw;
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30vw;
+    height: 100%;
 }
 
 .logo {
-    display: inline-block;
+    display: flex;
     transition: ease-in-out 1s;
 }
 
 .logo:hover {
     transform: rotateY(360deg);
+}
+
+.images img {
+    height: 25vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    background-color: white;
+    border-radius: 1rem;
+    border: 0.1rem solid rgb(238, 187, 18);
+}
+
+.articles {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 5vw 5vh 5vw;
+    padding: 1% 10% 1% 2%;
+    border-left: solid black 1px;
+}
+
+.article {
+    display: flex;
+    margin: 5vh 5vw 5vh 5vw;
+
+}
+
+article p {
+    text-indent: 2vw;
 }
 
 .animated {
@@ -162,9 +163,182 @@ article p {
 }
 
 .box-animated:hover {
-    padding: 1% 10% 1% 2%;
+    border: solid black 1px;
     animation: box 0.7s;
     animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+}
+
+.images-scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 200px;
+    max-width: 18vw;
+    min-height: 30vh;
+    margin: 0;
+}
+
+.images-scroll img {
+    min-width: 200px;
+    width: 100%;
+    margin: 1vh 0 1vh 0;
+    background-color: white;
+    border-radius: 1rem;
+    border: 0.1rem solid rgb(238, 187, 18);
+}
+
+.images-games {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.images-games img {
+    height: 20vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    background-color: white;
+    border-radius: 1rem;
+    border: 0.1rem solid rgb(238, 187, 18);
+}
+
+caption {
+    caption-side: top;
+}
+
+caption>p {
+    text-align: start;
+    border: none;
+}
+
+.table {
+    border: 0.2rem solid rgb(238, 187, 18);
+    margin: 1vh 1vw 1vw 1vw;
+    background-color: rgb(37, 37, 37);
+    overflow-x: auto;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table h3 {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color: rgb(238, 187, 18);
+    text-shadow: 0px 3px rgb(101, 57, 24);
+    padding: 1rem;
+    border: solid 0.1rem rgb(238, 187, 18);
+}
+
+.table p, tfoot td {
+    margin-left: 1.5vw;
+    padding: 1rem;
+    background-color: rgb(37, 37, 37);
+    color: azure;
+}
+
+table *{
+    border-collapse: collapse;
+    background-color: rgb(37, 37, 37);
+    border: solid 0.1rem rgb(238, 187, 18);
+    color: azure;
+}
+
+tbody td, thead td {
+    text-align: center;
+    padding: 1rem;
+}
+
+.table span {
+    font-weight: bold;
+    border: none;
+}
+
+.logo-rules {
+    height: 20vh;
+}
+
+.article-rules {
+    min-width: 60vw;
+    max-width: 60vw;
+    border: solid 1px;
+    border-color: black;
+    margin: 1% 0 1% 0;
+    background: white;
+    background-image: url("../images/LogoMightyDucks01.png");
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.article-rules > article {
+    border: none;
+    text-align: justify;
+    padding: 0;
+    margin: 0 8% 2% 8%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.center-text {
+    text-align: center;
+}
+
+#title-rules {
+    margin: 5% 0 4% 0;
+}
+
+.article-rules h3 {
+    margin-bottom: 2%;
+    font-weight: bolder;
+}
+
+.article-rules * {
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 500;
+}
+
+.article-rules span {
+    font-weight: bolder;
+}
+
+.article-rules li {
+    margin-left: 1vw;
+    margin-bottom: 2%;
+}
+
+#sub-list > li {
+    list-style-position: inside;
+    list-style-type: lower-latin;
+}
+
+#sub-list {
+    margin-top: 1vh;
+}
+
+#article-3 > ul {
+    margin-top: 1vh;
+    margin-left: 2vw;
+    list-style-type: circle;
+}
+
+li::marker {
+    font-weight: bolder;
+}
+
+ul>li::marker {
+    font-weight: bolder;
+    font-size: large;
 }
 
 @keyframes happiness {
