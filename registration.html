@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Registration</title>
+</head>
+<body>
+    <nav>
+        <h1 class="title">Mighty Ducks Hockey League</h1>
+        <a href="./index.html">Home</a>
+        <a href="./game_info.html">Game Info</a>
+        <a href="./rules.html">Rules</a>
+        <a href="./about_MDHL.html">About MDHL</a>
+        <a class="active" href="#">Registration</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+    
+    <header>
+        <figure>
+            <img src="./assets/images/design2_image1.jpg" alt="BannerMDHL">
+        </figure>
+    </header>
+    <main>
+        <section>
+            <h2>Registration On Team</h2>
+
+            <div class="container">
+                <div class="images-scroll display-none">
+                    <figure>
+                        <img class="animated" src="./assets/images/hockey1.jpg" alt="Two Mighty Ducks Playing">
+                    </figure>
+                    
+                    <figure>
+                        <img class="animated" src="./assets/images/hockey2.jpg" alt="Two Mighty Ducks Playing">
+                    </figure>
+                    
+                    <figure>
+                        <img class="animated" src="./assets/images/hockey3.jpg" alt="Two Mighty Ducks Playing">
+                    </figure>
+                </div>
+                
+                <div class="form">
+                    <div id="filter">
+                        <div id="title-form">
+                            <figure>
+                                <img src="./assets/images/favico.ico" alt="logo">
+                            </figure>
+
+                            <h3>Registration Form</h3>
+
+                            <figure>
+                                <img src="./assets/images/favico.ico" alt="logo">
+                            </figure>
+                        </div>
+
+                        <form action="./show_data.html">
+                            <fieldset>
+                                <legend>Personal Data</legend>
+
+                                <label>
+                                    <span>Player's First Name: </span>
+                                    <input name="first_name" type="text">
+                                </label>
+
+                                <label>
+                                    <span>Last Name: </span>
+                                    <input name="last_name" type="text">
+                                </label>
+
+                                <label>
+                                    <span>Street Address: </span>
+                                    <input name="street_address" type="text">
+                                </label>
+
+                                <label>
+                                    <span>City: </span>
+                                    <input name="city" type="text">
+                                </label>
+
+                                <label>
+                                    <span>Zip Code: </span>
+                                    <input name="zip_code" type="number">
+                                </label>
+
+                                <label>
+                                    <span>Birth Date: </span>
+                                    <input name="birth_date" type="date">
+                                </label>
+
+                                <div class="gender-select">
+                                    <h4>Gender:</h4>
+                                    <label>
+                                        <span>Female </span>
+                                        <input name="gender" type="radio" value="female">
+                                    </label>
+                                    
+                                    <label>
+                                        <span>Male </span>
+                                        <input name="gender" type="radio" value="male">
+                                    </label>
+                                </div>
+                                
+                                <div class="grade-select">
+                                    <h4>School Grade:</h4>
+
+                                    <label>
+                                        <span>Grade:</span>
+
+                                        <select name="grade">
+                                            <option disabled selected>Select a option</option>
+                                            <option value="pre-school">Pre-School</option>
+                                            <option value="first">1st</option>
+                                            <option value="second">2st</option>
+                                            <option value="third">3st</option>
+                                            <option value="fourth">4st</option>
+                                            <option value="fifth">5st</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Which elementary school do you live near?</legend>
+
+                                <label>
+                                    <span>Closest School: </span>
+                                    <select name="school_near">
+                                        <option disabled selected>Select a option</option>
+                                        <option value="katzenmaier">AJ Katzenmaier</option>
+                                        <option value="marjoriep">Marjorie P Hart</option>
+                                        <option value="greenbay">Greenbay</option>
+                                        <option value="north">North Elementary</option>
+                                        <option value="yeager">Howard A Yeager</option>
+                                        <option value="south">South Elementary</option>
+                                    </select>
+                                </label>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>What position(s) do you normally play? (Check all that apply)</legend>
+
+                                <label>
+                                    <input name="position" type="checkbox" value="forward">
+                                    <span>Forward</span>
+                                </label>
+                                
+                                <label>
+                                    <input name="position" type="checkbox" value="midfield">
+                                    <span>Midfield</span>
+                                </label>
+                                
+                                <label>
+                                    <input name="position" type="checkbox" value="defense">
+                                    <span>Defense</span>
+                                </label>
+                                
+                                <label>
+                                    <input name="position" type="checkbox" value="goalkeeper">
+                                    <span>Goalkeeper</span>
+                                </label>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Uniform Size: </legend>
+                                
+                                <label>
+                                    <input name="uniform" type="radio" value="small">
+                                    <span> Small</span>
+                                </label>
+
+                                <label>
+                                    <input name="uniform" type="radio" value="ysmall">
+                                    <span> Youth Small</span>
+                                </label>
+
+                                <label>
+                                    <input name="uniform" type="radio" value="medium">
+                                    <span> Medium</span>
+                                </label>
+
+                                <label>
+                                    <input name="uniform" type="radio" value="ymedium">
+                                    <span> Youth Medium</span>
+                                </label>
+
+                                <label>
+                                    <input name="uniform" type="radio" value="large">
+                                    <span> Large</span>
+                                </label>
+
+                                <label>
+                                    <input name="uniform" type="radio" value="ylarge">
+                                    <span> Youth Large</span>
+                                </label>
+
+                                <label>
+                                    <input name="uniform" type="radio" value="xlarge">
+                                    <span> Extra-Large</span>
+                                </label>
+                            </fieldset>
+
+                            <div id="permission">
+                                <h4>Permission to Play</h4>
+    
+                                <p>I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the 
+                                    <a href="./rules.html">rules of the Mighty Ducks Hockey League (MDHL)</a>. In recognizing the possibility of physical injury
+                                    associated with hockey and in consideration for the "League" accepting the registrant for its 
+                                    hockey programs and activities, I hereby release, discharge, and/or otherwise indemnify MDHL, 
+                                    their employees and associated personnel and volunteers, including the facilities used for 
+                                    practices and games, against any claim by or on behalf of the registrant as a result of the 
+                                    registrant's participation in the programand/orbeing transported to or from MDHL sponsored 
+                                    activities, wich transportation.
+                                </p>
+    
+                                <p>By signing below, I hereby agree and authorize the above. In addition, by signing below, I also 
+                                    acknowledge that I have read the cancellation policy and agree toits terms.
+                                </p>
+                            </div>
+
+                            <div class="firm-box">
+                                <label id="firm">
+                                    Parent/Guardian Signature: 
+                                    <input type="text" name="signature">
+                                </label>
+    
+                                <label id="date">
+                                    Date: 
+                                    <input type="date" name="date">
+                                </label>
+                            </div>
+
+                            <button type="submit">Send Form</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="images-scroll">
+                    <figure>
+                        <img class="animated" src="./assets/images/hockey3.jpg" alt="Two Mighty Ducks Playing">
+                    </figure>
+                    
+                    <figure>
+                        <img class="animated" src="./assets/images/design1_image1.jpg" alt="Two Mighty Ducks Playing">
+                    </figure>
+                    
+                    <figure>
+                        <img class="animated" src="./assets/images/hockey1.jpg" alt="Two Mighty Ducks Playing">
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

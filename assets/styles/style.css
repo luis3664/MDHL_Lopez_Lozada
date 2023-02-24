@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -6,22 +7,23 @@
     box-sizing: border-box;
     background-color: #cecece;
     font-family: 'Montserrat', sans-serif;
+    font-size: medium;
 }
 
 /* Header */
-
 a.active {
     background-color: rgb(169, 31, 31);
 }
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     background-color: rgb(37, 37, 37);
     position: sticky;
-    top: 0;
+    top: 0%;
 }
 
-header a {
+nav a {
     display: flex;
     flex-grow: 1;
     text-decoration: none;
@@ -32,11 +34,11 @@ header a {
     justify-content: center;
 }
 
-header a:hover {
+nav a:hover {
     background-color: rgb(238, 187, 18);
 }
 
-header a:active {
+nav a:active {
     transform: scale(0.95);
 }
 
@@ -58,12 +60,14 @@ header img {
 }
 
 h1.title {
-    background-color: rgb(0, 0, 0);
     display: flex;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
     color: rgb(238, 187, 18);
     text-shadow: 0px 3px rgb(101, 57, 24);
     padding: 1rem;
     font-weight: 900;
+    font-size: 2rem;
     min-height: 10vh;
 }
 
@@ -82,6 +86,7 @@ h2 {
     color: azure;
     padding: 0.5rem 0 0.5rem 0;
     transition: all 1.3s;
+    font-size: 1.5rem;
 }
 
 h2:hover {
@@ -271,23 +276,27 @@ tbody td, thead td {
     border: solid 1px;
     border-color: black;
     margin: 1% 0 1% 0;
-    background: white;
+    background: rgba(255, 255, 255);
     background-image: url("../images/LogoMightyDucks01.png");
     background-size: 30vw;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 70%;
+    background-position-y: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 }
 
-.article-rules > article {
+#filter {
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.article-rules > div > article {
     border: none;
     text-align: justify;
     padding: 0;
     margin: 0 8% 2% 8%;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .center-text {
@@ -305,7 +314,6 @@ tbody td, thead td {
 
 .article-rules * {
     background-color: rgba(255, 255, 255, 0);
-    font-weight: 500;
 }
 
 .article-rules span {
@@ -341,6 +349,266 @@ ul>li::marker {
     font-size: large;
 }
 
+/* Form */
+.form {
+    min-width: 60vw;
+    max-width: 60vw;
+    border: solid 1px;
+    border-color: black;
+    margin: 1% 0 1% 0;
+    background: rgba(255, 255, 255);
+    background-image: url("../images/LogoMightyDucks01.png");
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form * {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#title-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 3% 5%;
+}
+
+#title-form > h3 {
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 1rem;
+    color: rgb(238, 187, 18);
+    text-shadow: 0px 3px rgb(101, 57, 24);
+}
+
+#title-form > figure > img{
+    transform: translateY(5px);
+    width: 50px;
+}
+
+fieldset {
+    border: none;
+    width: 100%;
+    padding: 3% 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#permission {
+    padding: 3% 10%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: justify;
+}
+
+#permission * {
+    margin-bottom: 3%;
+}
+
+#permission a {
+    color: rgb(101, 57, 24);
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+label {
+    font-weight: 500;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    border: none;
+    border-bottom: solid 2px;
+    border-bottom-color: black;
+    margin-bottom: 3%;
+    margin-left: 5px;
+    margin: 0 5px 3% 5px;
+    outline: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5em;
+    height: 1.5em;
+    border: 2px solid rgb(101, 57, 24);
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+input[type="checkbox"]::after {
+    display: flex;
+    align-items: center;
+    content: '\2714';
+    display: none;
+}
+
+input[type="checkbox"]:checked {
+    background: rgb(238, 187, 18);
+}
+
+input[type="checkbox"]:checked::after {
+    display: flex;
+}
+
+.grade-select {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.grade-select * {
+    padding: 3%;
+}
+
+.gender-select {
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid rgb(101, 57, 24);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+input[type="radio"]::after {
+    display: flex;
+    align-items: center;
+    content: '\2714';
+    display: none;
+}
+
+input[type="radio"]:checked {
+    background: rgb(238, 187, 18);
+}
+
+input[type="radio"]:checked::after {
+    display: flex;
+}
+
+.firm-box {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: rgb(238, 187, 18);
+    text-shadow: 0px 2px rgb(101, 57, 24);
+}
+
+#katzenmaier,
+#greenbay,
+#marjorie,
+#north,
+#south,
+#yeager {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    visibility: hidden;
+    top: 100%;
+    left: 50%;
+    transform: translate(-45%, 0%);
+    opacity: 0;
+    transition: all 600ms;
+}
+
+#katzenmaier:target,
+#greenbay:target,
+#marjorie:target,
+#north:target,
+#south:target,
+#yeager:target {
+    background: rgb(0, 0, 0, 0.8);
+    visibility: visible;
+    opacity: 1;
+}
+
+#popup-katzenmaier,
+#popup-greenbay,
+#popup-marjorie,
+#popup-north,
+#popup-south,
+#popup-yeager {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.close-popup {
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 20px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    line-height: 10px;
+}
+
+iframe {
+    width: 400px;
+    height: 300px;
+}
+
+td a {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: rgb(238, 187, 18);
+    text-shadow: 0px 2px rgb(101, 57, 24);
+    border: none;
+}
+
 @keyframes happiness {
     0% {
         transform: rotateZ(0deg);
@@ -361,5 +629,197 @@ ul>li::marker {
         transform: scale(1.05);
         border: solid black 1px;
         box-shadow: 5px 5px #1e1e1eaa;
+    }
+}
+
+@media (min-width:0px) and (max-width:426px) { 
+    nav > h1.title {
+        font-size: 1.15rem;
+    }
+
+    nav > a {
+        display: flex;
+        width: 50%;
+    }
+
+    header {
+        display: flex;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images-scroll {
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        min-width: 80%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .articles {
+        width: 90%;
+    }
+
+    .article-rules {
+        min-width: 95vw;
+        background-size: 70vw;
+    }
+
+    .article-rules > div > article {
+        text-align: left;
+        padding: 10px 2px;
+    }
+
+    main {
+        max-width: 100vw;
+    }
+
+    .table-responsive {
+        max-width: 95vw;
+    }
+    
+    #popup-katzenmaier,
+    #popup-greenbay,
+    #popup-marjorie,
+    #popup-north,
+    #popup-south,
+    #popup-yeager {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #katzenmaier,
+    #greenbay,
+    #marjorie,
+    #north,
+    #south,
+    #yeager {
+        max-width: 300px;
+        transform: translate(-50%, 0%);
+    }
+
+    .close-popup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        padding: 15px;
+        background: black;
+        color: white;
+        border-radius: 50%;
+        line-height: 2px;
+    }
+
+    .form {
+        min-width: 95vw;
+        max-width: 95vw;
+        background-size: 70vw;
+    }
+    
+    fieldset,
+    label,
+    .firm-box {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #title-form > h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    #title-form > figure > img{
+        width: 40px;
+    }
+
+    .display-none {
+        display: none;
+    }
+}
+
+@media (min-width:427px) and (max-width:1024px) {
+    .images-scroll {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        min-width: 90%;
+    }
+
+    .images-scroll > figure {
+        width: 40%;
+    }
+
+    .article-rules {
+        min-width: 90%;
+    }
+
+    #title-form > h3 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .firm-box {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 50px;
+    }
+
+    .form {
+        min-width: 90%;
+    }
+
+    .images .animated {
+        max-width: 95%;
+        object-fit: cover;
+    }
+
+    .display-none {
+        display: none;
+    }
+}
+
+@media (min-width:2000px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #cecece;
+        font-family: 'Montserrat', sans-serif;
+        font-size: large;
+        font-size: 25px;
+    }
+
+    main img {
+        min-height: 300px;
+        object-fit: cover;
+    }
+
+    #title-form img{
+        display: none;
+    }
+
+    header {
+        max-height: 40vh;
+    }
+    
+    header figure {
+        display: flex;
+        max-height: 40vh;
+        align-items: center;
     }
 }
