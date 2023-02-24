@@ -144,6 +144,7 @@ article {
 .article {
     display: flex;
     margin: 5vh 5vw 5vh 5vw;
+
 }
 
 article p {
@@ -357,7 +358,7 @@ ul>li::marker {
         transform: scale(1);
     }
     to {
-        transform: scale(1.1);
+        transform: scale(1.05);
         border: solid black 1px;
         box-shadow: 5px 5px #1e1e1eaa;
     }
